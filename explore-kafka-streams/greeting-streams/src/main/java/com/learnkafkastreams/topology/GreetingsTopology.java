@@ -69,7 +69,7 @@ public class GreetingsTopology {
         modifStream
                 .to(GREETINGS_UPPERCASE
                         ,
-                        Produced.with(Serdes.String(),SerdesFactory.greetingSerde())
+                        Produced.with(Serdes.String(),SerdesFactory.greetingSerdeGeneric())
                 );
 
        return streamsBuilder.build();
@@ -95,12 +95,12 @@ public class GreetingsTopology {
         var greetingsStream = streamsBuilder
                 .stream(GREETINGS
                         ,
-                        Consumed.with(Serdes.String(), SerdesFactory.greetingSerde())
+                        Consumed.with(Serdes.String(), SerdesFactory.greetingSerdeGeneric())
                 );
 
         var greetingsSpanish= streamsBuilder
                 .stream(GREETINGS_SPANISH,
-                        Consumed.with(Serdes.String(), SerdesFactory.greetingSerde())
+                        Consumed.with(Serdes.String(), SerdesFactory.greetingSerdeGeneric())
                 );
         var mergeStream = greetingsStream.merge(greetingsSpanish);
         return mergeStream;
