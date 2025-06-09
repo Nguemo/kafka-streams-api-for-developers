@@ -23,6 +23,8 @@ public class KTableStreamApp {
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, "ktable"); // consumer group
         config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
+        config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG,String.class);
+        config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG,String.class);
 
         //createTopics(config, List.of(WORDS));
          //var kafkaStreams = new KafkaStreams(kTableTopology, config);

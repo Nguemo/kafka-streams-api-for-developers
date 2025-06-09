@@ -10,8 +10,12 @@ import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsConfig;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Properties;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static com.learnkafkastreams.topology.GreetingsTopology.*;
 
 @Slf4j
 public class GreetingsStreamApp {
@@ -24,9 +28,14 @@ public class GreetingsStreamApp {
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"latest");
 
 
-     if(!(ListTopics.listerTopic().contains(GreetingsTopology.GREETINGS) || ListTopics.listerTopic().contains(GreetingsTopology.GREETINGS_UPPERCASE) || ListTopics.listerTopic().contains(GreetingsTopology.GREETINGS_SPANISH))){
-        createTopics(properties,List.of(GreetingsTopology.GREETINGS,GreetingsTopology.GREETINGS_UPPERCASE,GreetingsTopology.GREETINGS_SPANISH));
-     }
+
+       Optional.of(List.of(GREETINGS, GREETINGS_UPPERCASE, GREETINGS_SPANISH).stream()
+               .filter(Predicate.not(ListTopics.listerTopic()::contains))
+               .toList())
+                       .filter(list -> !list.isEmpty())
+                               .ifPresent(missing -> createTopics(properties,missing));
+
+
        ListTopics.listerTopic().stream()
                .forEach(System.out::println);
        var greenTopology = GreetingsTopology.buildTopology();
