@@ -1,5 +1,7 @@
 package com.learnkafkastreams.launcher;
 
+import com.learnkafkastreams.exceptionHandeler.StreamExceptionHandeler;
+import com.learnkafkastreams.exceptionHandeler.StreamSerializationExceptionHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -23,6 +25,8 @@ public class KTableStreamApp {
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, "ktable"); // consumer group
         config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
+        config.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, StreamExceptionHandeler.class);
+        config.put(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, StreamSerializationExceptionHandler.class);
 
         //createTopics(config, List.of(WORDS));
          //var kafkaStreams = new KafkaStreams(kTableTopology, config);
