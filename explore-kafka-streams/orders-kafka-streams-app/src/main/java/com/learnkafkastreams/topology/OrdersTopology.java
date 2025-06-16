@@ -10,8 +10,6 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.kstream.*;
 
-import java.math.BigDecimal;
-import java.util.function.Consumer;
 
 @Slf4j
 public class OrdersTopology {
