@@ -2,6 +2,7 @@ package com.learnkafkastreams.launcher;
 
 import com.learnkafkastreams.exceptionHandeler.StreamExceptionHandeler;
 import com.learnkafkastreams.exceptionHandeler.StreamSerializationExceptionHandler;
+import com.learnkafkastreams.topology.ExploreKTableTopology;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -9,9 +10,11 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsConfig;
 
+
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
+
 
 @Slf4j
 public class KTableStreamApp {
@@ -19,7 +22,7 @@ public class KTableStreamApp {
 
     public static void main(String[] args) {
 
-    //  var kTableTopology = ExploreKTableTopology.build();
+      var kTableTopology = ExploreKTableTopology.build();
 
         Properties config = new Properties();
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, "ktable"); // consumer group
@@ -28,13 +31,13 @@ public class KTableStreamApp {
         config.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, StreamExceptionHandeler.class);
         config.put(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, StreamSerializationExceptionHandler.class);
 
-        //createTopics(config, List.of(WORDS));
-         //var kafkaStreams = new KafkaStreams(kTableTopology, config);
+        createTopics(config, List.of(ExploreKTableTopology.WORDS));
+         var kafkaStreams = new KafkaStreams(kTableTopology, config);
 
-       // Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));
+       Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));
 
         log.info("Starting Greeting streams");
-       // kafkaStreams.start();
+       kafkaStreams.start();
     }
 
     private static void createTopics(Properties config, List<String> greetings) {
