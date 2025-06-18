@@ -27,9 +27,23 @@ public class ExploreAggregateOperatorsTopology {
 
         var groupedString =  inputStream
                 .groupByKey(Grouped.with(Serdes.String(),Serdes.String())); //Regroupement par clé
-        exploreCount(groupedString); //Contage
+      //  exploreCount(groupedString); //Contage
+        explorereduce(groupedString); //Reduce
 
         return streamsBuilder.build();
+    }
+
+    private static void explorereduce(KGroupedStream<String, String> groupedStream) {
+       var  reduceStream =  groupedStream
+                .reduce((value1, value2) -> {
+                    log.info("Value1 : {} , value2 : {} ", value1,value2);
+
+                    return  value1.toUpperCase() +"-"+ value2.toUpperCase() ;
+                });
+
+        reduceStream
+                .toStream()
+                .print(Printed.<String,String>toSysOut().withLabel("reduce-response"));
     }
 
     private static void exploreCount(KGroupedStream<String, String> groupedString) {
