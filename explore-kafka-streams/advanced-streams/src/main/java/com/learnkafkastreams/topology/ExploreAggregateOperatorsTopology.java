@@ -11,6 +11,8 @@ import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.KeyValueStore;
 
+import static org.apache.kafka.streams.kstream.Branched.as;
+
 @Slf4j
 public class ExploreAggregateOperatorsTopology {
 
@@ -27,13 +29,35 @@ public class ExploreAggregateOperatorsTopology {
 
         var groupedString =  inputStream
                 .groupByKey(Grouped.with(Serdes.String(),Serdes.String())); //Regroupement par clé
-      //  exploreCount(groupedString); //Contage
-        explorereduce(groupedString); //Reduce
+        //exploreCount(groupedString); //Contage
+        //exploreReduce(groupedString); //Reduce
+        exploreAggregator(groupedString); //Aggregator
 
         return streamsBuilder.build();
     }
 
-    private static void explorereduce(KGroupedStream<String, String> groupedStream) {
+    private static void exploreAggregator(KGroupedStream<String, String> groupedStream) {
+
+        Initializer<AlphabetWordAggregate> alphabetWordAggregateInitializer
+                = AlphabetWordAggregate::new;
+        Aggregator<String,String,AlphabetWordAggregate> aggregator =
+                (key, value, aggregate) ->
+                        aggregate.updateNewEvents(key,value);
+
+
+        var aggregatedStream =  groupedStream
+                .aggregate(alphabetWordAggregateInitializer,
+                        aggregator,
+                        Materialized.<String,AlphabetWordAggregate,KeyValueStore<Bytes,byte[]>>as("Aggregated-store")
+                                .withKeySerde(Serdes.String())
+                                .withValueSerde(SerdesFactory.alphabetWordAggregate())
+                        );
+        aggregatedStream
+                .toStream()
+                .print(Printed.<String,AlphabetWordAggregate>toSysOut().withLabel("Resultat-Aggregate"));
+    }
+
+    private static void exploreReduce(KGroupedStream<String, String> groupedStream) {
        var  reduceStream =  groupedStream
                 .reduce((value1, value2) -> {
                     log.info("Value1 : {} , value2 : {} ", value1,value2);
