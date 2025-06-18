@@ -20,7 +20,25 @@ public class ExploreAggregateOperatorsTopology {
     public static Topology build(){
         StreamsBuilder streamsBuilder = new StreamsBuilder();
 
+       var inputStream =  streamsBuilder
+                .stream(AGGREGATE,Consumed.with(Serdes.String(),Serdes.String())); ///Lecture sur la topic AGGREGATE
+        inputStream
+                .print(Printed.<String,String>toSysOut().withLabel(AGGREGATE));
+
+        var groupedString =  inputStream
+                .groupByKey(Grouped.with(Serdes.String(),Serdes.String())); //Regroupement par clé
+        exploreCount(groupedString); //Contage
+
         return streamsBuilder.build();
     }
+
+    private static void exploreCount(KGroupedStream<String, String> groupedString) {
+       var coutByAlphabet =  groupedString
+                .count(Named.as("count-per-alphabet"));
+        coutByAlphabet
+                .toStream()
+                .print(Printed.<String,Long>toSysOut().withLabel("word-count-per-alphabet"));
+    }
+
 
 }
