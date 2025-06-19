@@ -1,0 +1,1757 @@
+2025-06-19 08:11:11.264 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:11:11.356 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:11:11.383 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:11:11.384 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:11:11.384 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335071382
+2025-06-19 08:11:11.386 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:11:11.215681092"}, timestamp=null)
+2025-06-19 08:11:11.486 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:11.487 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:11.487 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:11.589 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:11.590 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:11.590 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:11.741 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:11.742 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:11.742 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:11.943 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:11.943 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:11.943 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:12.447 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:12.447 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:12.447 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:13.404 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:13.405 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:13.405 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:14.262 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:14.262 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:14.262 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:15.321 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:15.321 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:15.321 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:16.278 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:16.278 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:16.278 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:17.287 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:17.287 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:17.287 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:18.497 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:18.497 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:18.497 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:19.655 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:19.656 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:19.656 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:20.764 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:20.764 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:20.764 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:21.873 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:21.874 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:21.874 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:23.032 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:23.032 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:23.032 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:24.038 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:24.038 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:24.038 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:24.994 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:24.994 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:24.994 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:26.202 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:26.202 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:26.202 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:27.308 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:27.308 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:27.308 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:28.314 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:28.315 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:28.315 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:29.471 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:29.472 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:29.472 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:30.679 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:30.680 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:30.680 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:31.837 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:31.837 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:31.837 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:33.043 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:33.044 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:33.044 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:34.250 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:34.250 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:34.250 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:35.055 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:35.055 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:35.056 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:36.213 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:36.213 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:36.213 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:37.419 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:37.419 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:37.419 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:38.531 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:38.531 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:38.531 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:39.687 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:39.688 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:39.688 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:40.748 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:40.749 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:40.749 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:41.703 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:41.704 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-06-19 08:11:41.704 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:42.722 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:42.722 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 0 due to node -1 being disconnected (elapsed time since creation: 13ms, elapsed time since send: 13ms, request timeout: 30000ms)
+2025-06-19 08:11:42.722 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:43.626 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:43.626 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 1 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2025-06-19 08:11:43.626 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:44.429 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:44.430 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 2 due to node -1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2025-06-19 08:11:44.430 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:45.484 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:45.485 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 3 due to node -1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2025-06-19 08:11:45.485 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:46.691 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:46.691 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2025-06-19 08:11:46.691 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:47.695 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2025-06-19 08:11:47.696 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 5 due to node -1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2025-06-19 08:11:47.696 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-19 08:11:49.379 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 7 : {orders=LEADER_NOT_AVAILABLE}
+2025-06-19 08:11:49.383 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:11:49.435 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 13000 with epoch 0
+2025-06-19 08:11:49.498 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 10 : {orders=LEADER_NOT_AVAILABLE}
+2025-06-19 08:11:49.614 WARN  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 11 : {orders=LEADER_NOT_AVAILABLE}
+2025-06-19 08:11:49.720 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:11:49.780 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@401 
+2025-06-19 08:11:49.781 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:11:11.215707305"}, timestamp=null)
+2025-06-19 08:11:49.785 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@402 
+2025-06-19 08:11:49.785 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:11:11.215714448"}, timestamp=null)
+2025-06-19 08:11:49.788 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@403 
+2025-06-19 08:11:49.789 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:11:11.215719981"}, timestamp=null)
+2025-06-19 08:11:49.791 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@404 
+2025-06-19 08:12:20.525 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:12:20.594 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:12:20.620 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:12:20.620 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:12:20.620 INFO  %PARSER_ERROR[pid] --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335140619
+2025-06-19 08:12:20.623 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:12:20.481358548"}, timestamp=null)
+2025-06-19 08:12:20.773 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:12:20.775 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:12:20.776 INFO  %PARSER_ERROR[pid] --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 13001 with epoch 0
+2025-06-19 08:12:20.795 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@405 
+2025-06-19 08:12:20.796 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:12:20.48138632"}, timestamp=null)
+2025-06-19 08:12:20.798 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@406 
+2025-06-19 08:12:20.798 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:12:20.481394119"}, timestamp=null)
+2025-06-19 08:12:20.800 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@407 
+2025-06-19 08:12:20.800 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:12:20.481400096"}, timestamp=null)
+2025-06-19 08:12:20.801 INFO  %PARSER_ERROR[pid] --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@408 
+2025-06-19 08:16:35.665 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:16:35.724 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:16:35.754 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:16:35.754 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:16:35.754 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335395753
+2025-06-19 08:16:35.756 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:16:35.615689361"}, timestamp=null)
+2025-06-19 08:16:35.900 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:16:35.902 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:16:35.903 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 13002 with epoch 0
+2025-06-19 08:16:35.923 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@409 
+2025-06-19 08:16:35.924 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:16:35.61644667"}, timestamp=null)
+2025-06-19 08:16:35.926 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@410 
+2025-06-19 08:16:35.927 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:16:35.616457762"}, timestamp=null)
+2025-06-19 08:16:35.928 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@411 
+2025-06-19 08:16:35.929 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:16:35.616464432"}, timestamp=null)
+2025-06-19 08:16:35.930 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@412 
+2025-06-19 08:18:56.141 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:18:56.203 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:18:56.226 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:18:56.227 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:18:56.227 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335536225
+2025-06-19 08:18:56.229 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:18:56.094517762"}, timestamp=null)
+2025-06-19 08:18:56.370 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:18:56.372 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:18:56.381 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 14000 with epoch 0
+2025-06-19 08:18:56.402 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@413 
+2025-06-19 08:18:56.402 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:18:56.095064968"}, timestamp=null)
+2025-06-19 08:18:56.405 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@414 
+2025-06-19 08:18:56.405 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:18:56.095075099"}, timestamp=null)
+2025-06-19 08:18:56.407 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@415 
+2025-06-19 08:18:56.407 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:18:56.095081046"}, timestamp=null)
+2025-06-19 08:18:56.408 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@416 
+2025-06-19 08:19:16.843 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:19:16.897 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:19:16.919 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:19:16.920 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:19:16.920 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335556918
+2025-06-19 08:19:16.922 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:16.791259818"}, timestamp=null)
+2025-06-19 08:19:17.065 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:19:17.067 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:19:17.068 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 14001 with epoch 0
+2025-06-19 08:19:17.087 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@417 
+2025-06-19 08:19:17.087 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:19:16.791861441"}, timestamp=null)
+2025-06-19 08:19:17.090 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@418 
+2025-06-19 08:19:17.090 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:16.79187349"}, timestamp=null)
+2025-06-19 08:19:17.092 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@419 
+2025-06-19 08:19:17.092 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:16.791880423"}, timestamp=null)
+2025-06-19 08:19:17.094 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@420 
+2025-06-19 08:19:38.180 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:19:38.248 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:19:38.273 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:19:38.274 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:19:38.274 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335578273
+2025-06-19 08:19:38.276 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=stores, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=store_1234, value={"locationId":"store_1234","address":{"addressLine1":"1234 Street 1 ","addressLine2":"","city":"City1","state":"State1","zip":"12345"},"contactNum":"1234567890"}, timestamp=null)
+2025-06-19 08:19:38.427 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition stores-0 to 0 since the associated topicId changed from null to BquYrB7MSRuxGQvJ3W1XNA
+2025-06-19 08:19:38.429 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:19:38.430 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 14002 with epoch 0
+2025-06-19 08:19:38.453 INFO  --- [main] com.learnkafkastreams.producer.StoresMockDataProducer : Published the store message : stores-0@0 
+2025-06-19 08:19:38.453 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=stores, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=store_4567, value={"locationId":"store_4567","address":{"addressLine1":"1234 Street 2 ","addressLine2":"","city":"City2","state":"State2","zip":"541321"},"contactNum":"0987654321"}, timestamp=null)
+2025-06-19 08:19:38.456 INFO  --- [main] com.learnkafkastreams.producer.StoresMockDataProducer : Published the store message : stores-0@1 
+2025-06-19 08:19:46.782 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:19:46.834 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:19:46.857 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:19:46.858 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:19:46.858 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750335586856
+2025-06-19 08:19:46.860 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:46.736894122"}, timestamp=null)
+2025-06-19 08:19:46.995 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to yAzjvltnRmi-QAi1PNpiSw
+2025-06-19 08:19:46.997 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fn_LD2A0Ro2DJqP4Mm9rGQ
+2025-06-19 08:19:46.998 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 14003 with epoch 0
+2025-06-19 08:19:47.017 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@421 
+2025-06-19 08:19:47.018 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:19:46.737462642"}, timestamp=null)
+2025-06-19 08:19:47.020 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@422 
+2025-06-19 08:19:47.020 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:46.737474076"}, timestamp=null)
+2025-06-19 08:19:47.022 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@423 
+2025-06-19 08:19:47.023 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:19:46.737480721"}, timestamp=null)
+2025-06-19 08:19:47.024 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@424 
+2025-06-19 08:46:33.739 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 08:46:33.808 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 08:46:33.839 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 08:46:33.839 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 08:46:33.839 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750337193837
+2025-06-19 08:46:33.842 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_1234","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:46:33.686311824"}, timestamp=null)
+2025-06-19 08:46:33.995 WARN  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {orders=LEADER_NOT_AVAILABLE}
+2025-06-19 08:46:33.996 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 08:46:34.007 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-06-19 08:46:34.101 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition orders-0 to 0 since the associated topicId changed from null to 0k0tkvbLQdio4vsDeQM8rQ
+2025-06-19 08:46:34.123 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@0 
+2025-06-19 08:46:34.124 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=54321, value={"orderId":54321,"locationId":"store_1234","finalAmount":15.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Pizza","count":2,"amount":12.00},{"item":"Coffee","count":1,"amount":3.00}],"orderedDateTime":"2025-06-19T08:46:33.68684524"}, timestamp=null)
+2025-06-19 08:46:34.127 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@1 
+2025-06-19 08:46:34.127 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"GENERAL","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:46:33.686856104"}, timestamp=null)
+2025-06-19 08:46:34.129 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@2 
+2025-06-19 08:46:34.129 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=orders, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=12345, value={"orderId":12345,"locationId":"store_4567","finalAmount":27.00,"orderType":"RESTAURANT","orderLineItems":[{"item":"Bananas","count":2,"amount":2.00},{"item":"Iphone Charger","count":1,"amount":25.00}],"orderedDateTime":"2025-06-19T08:46:33.686863072"}, timestamp=null)
+2025-06-19 08:46:34.131 INFO  --- [main] com.learnkafkastreams.producer.OrdersMockDataProducer : Published the order message : orders-0@3 
+2025-06-19 09:01:29.070 INFO  --- [main] org.apache.kafka.clients.admin.AdminClientConfig : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-06-19 09:01:29.292 WARN  --- [main] org.apache.kafka.clients.admin.AdminClientConfig : These configurations '[default.value.serde, auto.offset.reset, application.id]' were supplied but are not used yet.
+2025-06-19 09:01:29.294 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:01:29.294 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:01:29.294 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338089292
+2025-06-19 09:01:29.507 INFO  --- [main] com.learnkafkastreams.launcher.AggregatingStreamPlayGroundApp : topics are created successfully
+2025-06-19 09:01:29.513 INFO  --- [main] org.apache.kafka.streams.StreamsConfig : StreamsConfig values: 
+	acceptable.recovery.lag = 10000
+	application.id = aggregate-operation
+	application.server = 
+	bootstrap.servers = [localhost:9092]
+	buffered.records.per.partition = 1000
+	built.in.metrics.version = latest
+	cache.max.bytes.buffering = 10485760
+	client.id = 
+	commit.interval.ms = 30000
+	connections.max.idle.ms = 540000
+	default.deserialization.exception.handler = class org.apache.kafka.streams.errors.LogAndFailExceptionHandler
+	default.dsl.store = rocksDB
+	default.key.serde = null
+	default.list.key.serde.inner = null
+	default.list.key.serde.type = null
+	default.list.value.serde.inner = null
+	default.list.value.serde.type = null
+	default.production.exception.handler = class org.apache.kafka.streams.errors.DefaultProductionExceptionHandler
+	default.timestamp.extractor = class org.apache.kafka.streams.processor.FailOnInvalidTimestamp
+	default.value.serde = class org.apache.kafka.common.serialization.Serdes$StringSerde
+	max.task.idle.ms = 0
+	max.warmup.replicas = 2
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	num.standby.replicas = 0
+	num.stream.threads = 1
+	poll.ms = 100
+	probing.rebalance.interval.ms = 600000
+	processing.guarantee = at_least_once
+	rack.aware.assignment.tags = []
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	repartition.purge.interval.ms = 30000
+	replication.factor = -1
+	request.timeout.ms = 40000
+	retries = 0
+	retry.backoff.ms = 100
+	rocksdb.config.setter = null
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	state.cleanup.delay.ms = 600000
+	state.dir = /tmp/kafka-streams
+	task.timeout.ms = 300000
+	topology.optimization = none
+	upgrade.from = null
+	window.size.ms = null
+	windowed.inner.class.serde = null
+	windowstore.changelog.additional.retention.ms = 86400000
+
+2025-06-19 09:01:29.531 WARN  --- [main] org.apache.kafka.streams.processor.internals.StateDirectory : Using an OS temp directory in the state.dir property can cause failures with writing the checkpoint file due to the fact that this directory can be cleared by the OS. Resolved state.dir: [/tmp/kafka-streams]
+2025-06-19 09:01:29.546 INFO  --- [main] org.apache.kafka.streams.processor.internals.StateDirectory : No process id found on disk, got fresh process id cb0d283f-856a-4c89-a074-3e999117b5c0
+2025-06-19 09:01:29.576 INFO  --- [main] org.apache.kafka.clients.admin.AdminClientConfig : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-admin
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-06-19 09:01:29.578 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:01:29.578 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:01:29.578 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338089578
+2025-06-19 09:01:29.580 WARN  --- [main] org.apache.kafka.streams.internals.metrics.ClientMetrics : Error while loading kafka-streams-version.properties
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at org.apache.kafka.streams.internals.metrics.ClientMetrics.<clinit>(ClientMetrics.java:53)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:894)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:856)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:826)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:738)
+	at com.learnkafkastreams.launcher.AggregatingStreamPlayGroundApp.main(AggregatingStreamPlayGroundApp.java:35)
+2025-06-19 09:01:29.581 INFO  --- [main] org.apache.kafka.streams.KafkaStreams : stream-client [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0] Kafka Streams version: unknown
+2025-06-19 09:01:29.581 INFO  --- [main] org.apache.kafka.streams.KafkaStreams : stream-client [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0] Kafka Streams commit ID: unknown
+2025-06-19 09:01:29.587 INFO  --- [main] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Creating restore consumer client
+2025-06-19 09:01:29.590 INFO  --- [main] org.apache.kafka.clients.consumer.ConsumerConfig : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = null
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = false
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2025-06-19 09:01:29.602 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:01:29.602 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:01:29.603 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338089602
+2025-06-19 09:01:29.606 INFO  --- [main] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Creating thread producer client
+2025-06-19 09:01:29.608 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 100
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-06-19 09:01:29.612 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] Instantiated an idempotent producer.
+2025-06-19 09:01:29.625 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:01:29.625 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:01:29.625 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338089625
+2025-06-19 09:01:29.630 INFO  --- [main] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Creating consumer client
+2025-06-19 09:01:29.631 INFO  --- [kafka-producer-network-thread | aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] org.apache.kafka.clients.Metadata : [Producer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 09:01:29.632 INFO  --- [kafka-producer-network-thread | aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] ProducerId set to 1 with epoch 0
+2025-06-19 09:01:29.632 INFO  --- [main] org.apache.kafka.clients.consumer.ConsumerConfig : ConsumerConfig values: 
+	allow.auto.create.topics = false
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = aggregate-operation
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = false
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2025-06-19 09:01:29.638 INFO  --- [main] org.apache.kafka.streams.processor.internals.assignment.AssignorConfiguration : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] Cooperative rebalancing protocol is enabled now
+2025-06-19 09:01:29.647 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:01:29.647 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:01:29.647 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338089646
+2025-06-19 09:01:29.652 INFO  --- [main] com.learnkafkastreams.launcher.AggregatingStreamPlayGroundApp : Starting Greeting streams
+2025-06-19 09:01:29.652 INFO  --- [main] org.apache.kafka.streams.KafkaStreams : stream-client [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0] State transition from CREATED to REBALANCING
+2025-06-19 09:01:29.653 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Starting
+2025-06-19 09:01:29.653 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] State transition from CREATED to STARTING
+2025-06-19 09:01:29.653 INFO  --- [main] org.apache.kafka.streams.KafkaStreams : stream-client [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0] Started 1 stream threads
+2025-06-19 09:01:29.654 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.KafkaConsumer : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Subscribed to topic(s): aggregate
+2025-06-19 09:01:29.659 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.Metadata : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Resetting the last seen epoch of partition aggregate-0 to 0 since the associated topicId changed from null to rHkZuyV6Ql2w_wQzK3batA
+2025-06-19 09:01:29.662 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.Metadata : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 09:01:29.662 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-19 09:01:29.663 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] (Re-)joining group
+2025-06-19 09:01:29.673 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Request joining group due to: need to re-join with the given member-id: aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42
+2025-06-19 09:01:29.673 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-06-19 09:01:29.673 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] (Re-)joining group
+2025-06-19 09:01:29.675 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Successfully joined group with generation Generation{generationId=1, memberId='aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42', protocol='stream'}
+2025-06-19 09:01:29.679 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.RepartitionTopics : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] Skipping the repartition topic validation since there are no repartition topics.
+2025-06-19 09:01:29.704 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] All members participating in this rebalance: 
+cb0d283f-856a-4c89-a074-3e999117b5c0: [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42].
+2025-06-19 09:01:29.707 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.assignment.HighAvailabilityTaskAssignor : Decided on assignment: {cb0d283f-856a-4c89-a074-3e999117b5c0=[activeTasks: ([0_0]) standbyTasks: ([]) prevActiveTasks: ([]) prevStandbyTasks: ([]) changelogOffsetTotalsByTask: ([]) taskLagTotals: ([0_0=0]) clientTags: ([]) capacity: 1 assigned: 1]} with no followup probing rebalance.
+2025-06-19 09:01:29.708 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] Assigned tasks [0_0] including stateful [0_0] to clients as: 
+cb0d283f-856a-4c89-a074-3e999117b5c0=[activeTasks: ([0_0]) standbyTasks: ([])].
+2025-06-19 09:01:29.711 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] Client cb0d283f-856a-4c89-a074-3e999117b5c0 per-consumer assignment:
+	prev owned active {}
+	prev owned standby {aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42=[]}
+	assigned active {aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42=[0_0]}
+	revoking active {}
+	assigned standby {}
+
+2025-06-19 09:01:29.711 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] Finished stable assignment of tasks, no followup rebalances required.
+2025-06-19 09:01:29.711 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Finished assignment for group at generation 1: {aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42=Assignment(partitions=[aggregate-0], userDataSize=52)}
+2025-06-19 09:01:29.715 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Successfully synced group in generation Generation{generationId=1, memberId='aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer-8dfc7077-728a-405d-ba84-2fbf006c4e42', protocol='stream'}
+2025-06-19 09:01:29.715 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Updating assignment with
+	Assigned partitions:                       [aggregate-0]
+	Current owned partitions:                  []
+	Added partitions (assigned - owned):       [aggregate-0]
+	Revoked partitions (owned - assigned):     []
+
+2025-06-19 09:01:29.715 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Notifying assignor about the new Assignment(partitions=[aggregate-0], userDataSize=52)
+2025-06-19 09:01:29.716 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer] No followup rebalance was requested, resetting the rebalance schedule.
+2025-06-19 09:01:29.716 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.TaskManager : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Handle new assignment with:
+	New active tasks: [0_0]
+	New standby tasks: []
+	Existing active tasks: []
+	Existing standby tasks: []
+2025-06-19 09:01:29.726 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Adding newly assigned partitions: aggregate-0
+2025-06-19 09:01:29.726 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] State transition from STARTING to PARTITIONS_ASSIGNED
+2025-06-19 09:01:29.730 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Found no committed offset for partition aggregate-0
+2025-06-19 09:01:29.736 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.SubscriptionState : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Resetting offset for partition aggregate-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-19 09:01:29.870 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.state.internals.RocksDBTimestampedStore : Opening store Aggregated-store in regular mode
+2025-06-19 09:01:29.874 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.ProcessorStateManager : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] task [0_0] State store Aggregated-store did not find checkpoint offset, hence would default to the starting offset at changelog aggregate-operation-Aggregated-store-changelog-0
+2025-06-19 09:01:29.874 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamTask : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] task [0_0] Initialized
+2025-06-19 09:01:29.878 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.KafkaConsumer : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer, groupId=null] Assigned to partition(s): aggregate-operation-Aggregated-store-changelog-0
+2025-06-19 09:01:29.879 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.SubscriptionState : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer, groupId=null] Seeking to earliest offset of partition aggregate-operation-Aggregated-store-changelog-0
+2025-06-19 09:01:29.881 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.Metadata : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer, groupId=null] Resetting the last seen epoch of partition aggregate-operation-Aggregated-store-changelog-0 to 0 since the associated topicId changed from null to SSVpOkJ0ThyZl4pZIxofww
+2025-06-19 09:01:29.882 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.Metadata : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer, groupId=null] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 09:01:29.884 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.SubscriptionState : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-restore-consumer, groupId=null] Resetting offset for partition aggregate-operation-Aggregated-store-changelog-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-19 09:01:29.986 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StoreChangelogReader : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Finished restoring changelog aggregate-operation-Aggregated-store-changelog-0 to store Aggregated-store with a total number of 0 records
+2025-06-19 09:01:29.986 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
+2025-06-19 09:01:29.988 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.internals.ConsumerCoordinator : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Found no committed offset for partition aggregate-0
+2025-06-19 09:01:29.991 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamTask : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] task [0_0] Restored and ready to run
+2025-06-19 09:01:29.991 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Restoration took 265 ms for all tasks [0_0]
+2025-06-19 09:01:29.991 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] State transition from PARTITIONS_ASSIGNED to RUNNING
+2025-06-19 09:01:29.992 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.KafkaStreams : stream-client [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0] State transition from REBALANCING to RUNNING
+2025-06-19 09:01:29.992 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.consumer.KafkaConsumer : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Requesting the log end offset for aggregate-0 in order to compute lag
+2025-06-19 09:02:34.613 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 09:02:34.683 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 09:02:34.712 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:02:34.712 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:02:34.712 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338154710
+2025-06-19 09:02:34.714 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Apple, timestamp=null)
+2025-06-19 09:02:34.857 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition aggregate-0 to 0 since the associated topicId changed from null to rHkZuyV6Ql2w_wQzK3batA
+2025-06-19 09:02:34.859 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 09:02:34.860 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 2 with epoch 0
+2025-06-19 09:02:34.880 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@0 
+2025-06-19 09:02:34.880 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Alligator, timestamp=null)
+2025-06-19 09:02:34.882 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@1 
+2025-06-19 09:02:34.883 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Ambulance, timestamp=null)
+2025-06-19 09:02:34.884 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@2 
+2025-06-19 09:02:34.885 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=B, value=Bus, timestamp=null)
+2025-06-19 09:02:34.886 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@2 
+2025-06-19 09:02:34.886 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=B, value=Baby, timestamp=null)
+2025-06-19 09:02:34.888 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@2 
+2025-06-19 09:02:34.888 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Apple 
+2025-06-19 09:02:34.888 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Apple 
+2025-06-19 09:02:34.913 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Alligator 
+2025-06-19 09:02:34.913 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Alligator 
+2025-06-19 09:02:34.915 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Ambulance 
+2025-06-19 09:02:34.915 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Ambulance 
+2025-06-19 09:02:34.916 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : B , value : Bus 
+2025-06-19 09:02:34.916 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : B , value : Bus 
+2025-06-19 09:02:34.916 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : B , value : Baby 
+2025-06-19 09:02:34.916 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : B , value : Baby 
+2025-06-19 09:03:00.104 INFO  --- [kafka-producer-network-thread | aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] org.apache.kafka.clients.Metadata : [Producer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] Resetting the last seen epoch of partition aggregate-operation-Aggregated-store-changelog-0 to 0 since the associated topicId changed from null to SSVpOkJ0ThyZl4pZIxofww
+2025-06-19 09:03:30.046 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Processed 5 total records, ran 0 punctuators, and committed 1 total tasks since the last update
+2025-06-19 09:05:30.047 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
+2025-06-19 09:06:29.587 INFO  --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2025-06-19 09:06:29.682 INFO  --- [kafka-admin-client-thread | aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-admin] org.apache.kafka.clients.NetworkClient : [AdminClient clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-admin] Node -1 disconnected.
+2025-06-19 09:06:54.301 INFO  --- [main] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-19 09:06:54.487 INFO  --- [main] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-19 09:06:54.526 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.3.1
+2025-06-19 09:06:54.527 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: e23c59d00e687ff5
+2025-06-19 09:06:54.527 INFO  --- [main] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1750338414523
+2025-06-19 09:06:54.530 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Apple, timestamp=null)
+2025-06-19 09:06:54.685 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition aggregate-0 to 0 since the associated topicId changed from null to rHkZuyV6Ql2w_wQzK3batA
+2025-06-19 09:06:54.687 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: SbYXag6IQ_CwEAZVG0tA_w
+2025-06-19 09:06:54.688 INFO  --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 3 with epoch 0
+2025-06-19 09:06:54.705 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Apple 
+2025-06-19 09:06:54.705 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Apple 
+2025-06-19 09:06:54.707 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@5 
+2025-06-19 09:06:54.707 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Alligator, timestamp=null)
+2025-06-19 09:06:54.709 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@6 
+2025-06-19 09:06:54.709 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=A, value=Ambulance, timestamp=null)
+2025-06-19 09:06:54.710 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Alligator 
+2025-06-19 09:06:54.710 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Alligator 
+2025-06-19 09:06:54.711 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@7 
+2025-06-19 09:06:54.711 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=B, value=Bus, timestamp=null)
+2025-06-19 09:06:54.712 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : A , value : Ambulance 
+2025-06-19 09:06:54.712 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : A , value : Ambulance 
+2025-06-19 09:06:54.713 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@7 
+2025-06-19 09:06:54.714 INFO  --- [main] com.learnkafkastreams.producer.ProducerUtil : producerRecord : ProducerRecord(topic=aggregate, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=B, value=Baby, timestamp=null)
+2025-06-19 09:06:54.714 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : B , value : Bus 
+2025-06-19 09:06:54.714 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : B , value : Bus 
+2025-06-19 09:06:54.715 INFO  --- [main] com.learnkafkastreams.producer.AggregateProducer : Published the alphabet message : aggregate-0@7 
+2025-06-19 09:06:54.716 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : New record key : B , value : Baby 
+2025-06-19 09:06:54.716 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] com.learnkafkastreams.domain.AlphabetWordAggregate : AggregatedValue : B , value : Baby 
+2025-06-19 09:07:30.121 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Processed 5 total records, ran 0 punctuators, and committed 1 total tasks since the last update
+2025-06-19 09:09:30.187 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.streams.processor.internals.StreamThread : stream-thread [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
+2025-06-19 09:10:29.720 INFO  --- [aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1] org.apache.kafka.clients.NetworkClient : [Consumer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-consumer, groupId=aggregate-operation] Node -1 disconnected.
+2025-06-19 09:10:30.645 INFO  --- [kafka-producer-network-thread | aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] org.apache.kafka.clients.NetworkClient : [Producer clientId=aggregate-operation-cb0d283f-856a-4c89-a074-3e999117b5c0-StreamThread-1-producer] Node -1 disconnected.

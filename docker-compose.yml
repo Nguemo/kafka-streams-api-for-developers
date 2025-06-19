@@ -22,6 +22,11 @@ services:
     ports:
       - "9092:9092"
       - "9101:9101"
+    healthcheck:
+      test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -52,3 +57,16 @@ services:
       JVM_OPTS: "-Xms32M -Xmx64M"
     depends_on:
       - broker
+
+  fluent-bit:
+    image: fluent/fluent-bit:1.8
+    container_name: fluent-bit
+    restart: always
+    depends_on:
+      - broker
+    volumes:
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./fluent-bit/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./logs:/fluent-bit/logs # où sont stockés les logs Java
+    environment:
+      - TZ=UTC
